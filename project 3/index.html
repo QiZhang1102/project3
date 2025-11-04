@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Global Temperature Visualization</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 引入 D3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body style="font-family: 'Inter', sans-serif; text-align: center; background: #f7f9fb;">
+
+  <!-- 标题和说明 -->
+  <h1 style="font-weight:700; margin-top:40px; margin-bottom:10px;">
+    Interactive Global Temperature (2015–2030)
+  </h1>
+
+  <p style="font-size:16px; color:#555; margin-bottom:40px;">
+    Explore global temperature changes over time under <b>SSP2-4.5</b> scenario.
+  </p>
+
+  <!-- 滑块控制年份 -->
+  <div id="sliderContainer" style="margin-bottom:40px;">
+    <label for="yearSlider" style="font-size:16px; font-weight:500;">Select Year:</label>
+    <input 
+      type="range" 
+      id="yearSlider" 
+      min="2015" 
+      max="2030" 
+      step="1" 
+      value="2015"
+      style="width: 300px; vertical-align: middle;"
+    >
+    <span id="yearLabel" style="margin-left:10px; font-weight:bold;">2015</span>
+  </div>
+
+  <!-- 图表区域 -->
+  <svg id="chart" width="900" height="500"></svg>
+
+  <!-- 主脚本 -->
+  <script src="main.js"></script>
+
+</body>
+</html>
